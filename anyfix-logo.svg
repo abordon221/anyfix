@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="512" height="160" viewBox="0 0 512 160" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(16,16)">
+    <rect x="0" y="0" width="84" height="84" rx="16" ry="16" fill="#3b82f6"/>
+    <text x="42" y="56" text-anchor="middle"
+          font-family="Arial, Helvetica, Segoe UI, Roboto, Ubuntu, sans-serif"
+          font-weight="900" font-size="56" fill="#ffffff">A</text>
+  </g>
+  <g transform="translate(98,16)">
+    <text x="-6" y="62"
+          font-family="Arial, Helvetica, Segoe UI, Roboto, Ubuntu, sans-serif"
+          font-weight="800"
+          font-size="56"
+          fill="#111827"
+          letter-spacing="-0.5">nyFix</text>
+  </g>
+</svg>

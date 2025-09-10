@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnyFix — Every Fix Covered</title>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card:#f9fafb;
+      --muted:#4b5563;
+      --text:#111827;
+      --accent:#3b82f6;
+      --accent-2:#38bdf8;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:var(--bg); color:var(--text)}
+    a{color:inherit;text-decoration:none}
+    /* Header */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:rgba(255,255,255,.9); border-bottom:1px solid rgba(0,0,0,.05)}
+    .nav{max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
+    .brand{display:flex; align-items:center; font-weight:800; font-size:22px}
+    .brand .logo{
+      width:42px;
+      height:42px;
+      border-radius:8px;
+      background:#3b82f6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-weight:900;
+      font-size:22px;
+      font-family:Arial, sans-serif;
+      margin-right:-12px; /* move nyFix closer */
+      z-index:0;
+    }
+    .brand .text{
+      font-weight:800;
+      color:#111827;
+      font-size:22px;
+      margin-left:0;
+      z-index:1;
+      position:relative;
+    }
+    nav ul{list-style:none; display:flex; gap:18px; margin:0; padding:0}
+    nav a{padding:8px 10px; border-radius:8px; font-weight:600; color:var(--muted)}
+    nav a:hover{background:rgba(59,130,246,.1); color:var(--text)}
+    .cta{background:var(--accent); color:#fff; padding:10px 14px; border-radius:10px; font-weight:800}
+    .cta:hover{filter:brightness(1.05)}
+
+    /* Containers */
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:56px 20px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center; padding-top:42px}
+    .kicker{color:var(--accent-2); font-weight:700; text-transform:uppercase; letter-spacing:.12em; font-size:12px}
+    h1{font-size:44px; line-height:1.05; margin:10px 0 14px}
+    .sub{color:var(--muted); font-size:18px}
+    .hero-actions{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
+    .btn{background:#f3f4f6; border:1px solid rgba(0,0,0,.1); padding:12px 16px; border-radius:12px; color:var(--text); font-weight:700}
+    .btn.primary{background:var(--accent); color:#fff; border-color:transparent}
+    .panel{border:1px solid rgba(0,0,0,.1); border-radius:18px; padding:18px; background:#f9fafb}
+    .panel .illus{aspect-ratio:16/10; border-radius:12px; background:url('hero-fix-wall-hole.jpg') center/cover no-repeat; display:grid; place-items:center; font-weight:800}
+
+    /* Sections */
+    section{scroll-margin-top:84px}
+    h2{font-size:30px; margin:0 0 14px}
+    p{color:var(--muted)}
+
+    .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+    .card{background:#f9fafb; border:1px solid rgba(0,0,0,.05); border-radius:14px; padding:16px}
+    .card h3{margin:6px 0 8px; font-size:18px}
+    .card .icon{font-size:24px}
+
+    .twocol{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .imgbox{background:#f3f4f6; border:1px dashed rgba(0,0,0,.1); border-radius:12px; aspect-ratio:16/11; display:grid; place-items:center; color:#9ca3af; font-weight:700}
+    ul{margin:8px 0 0 18px}
+
+    .steps{display:grid; grid-template-columns:repeat(5,1fr); gap:12px}
+    .step{background:#f9fafb; border:1px solid rgba(0,0,0,.05); border-radius:12px; padding:14px}
+    .step .num{width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:#fff; font-weight:900; margin-bottom:8px}
+
+    iframe{width:100%; min-height:520px; border:0; background:#fff; border-radius:12px}
+
+    footer{padding:40px 20px; text-align:center; color:var(--muted)}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .twocol{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo">A</div>
+        <div class="text">nyFix</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#why">Why AnyFix</a></li>
+          <li><a href="#owners">Property Owners</a></li>
+          <li><a href="#providers">Service Providers</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#waitlist" class="cta">Join the Waitlist</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="wrap hero">
+    <div>
+      <div class="kicker">Every Fix Covered</div>
+      <h1>Book trusted handymen in minutes.</h1>
+      <p class="sub">From quick fixes to larger repairs, AnyFix makes it effortless to get reliable help — at transparent prices.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#waitlist">Join the Waitlist</a>
+        <a class="btn" href="#how">See how it works</a>
+      </div>
+      <p style="margin-top:14px; font-size:13px; color:var(--muted)">Launching first in Seattle. Seeking early users on both sides of the marketplace.</p>
+    </div>
+    <div class="panel">
+      <div class="illus"></div>
+      <p style="margin-top:10px;color:var(--muted)">Tip: Replace this with a real photo of a handyman fixing a small hole in a wall. Ensure the image file path is correct.</p>
+    </div>
+  </main>
+
+  <!-- Why AnyFix -->
+  <section id="why" class="wrap">
+    <h2>Why Choose AnyFix?</h2>
+    <p>We make small jobs worth doing and big jobs easy to schedule.</p>
+    <div class="grid-4">
+      <div class="card"><div class="icon">⚡</div><h3>Convenience</h3><p>Book in minutes. Same-day or scheduled.</p></div>
+      <div class="card"><div class="icon">💲</div><h3>Transparency</h3><p>Upfront pricing. No surprises.</p></div>
+      <div class="card"><div class="icon">🛡️</div><h3>Reliability</h3><p>Vetted, rated providers with guarantees.</p></div>
+      <div class="card"><div class="icon">🧰</div><h3>Coverage</h3><p>From bulb replacements to bigger repairs.</p></div>
+    </div>
+  </section>
+
+  <!-- Property Owners -->
+  <section id="owners" class="wrap twocol">
+    <div>
+      <h2>For Property Owners</h2>
+      <p>Homeowners, renters, and small businesses who need dependable help — even for small tasks.</p>
+      <ul>
+        <li>Hard to find providers who accept small jobs</li>
+        <li>Unclear or inconsistent pricing</li>
+        <li>Missed appointments & poor communication</li>
+      </ul>
+    </div>
+    <div class="imgbox">PROPERTY OWNER IMAGE</div>
+  </section>
+
+  <!-- Service Providers -->
+  <section id="providers" class="wrap twocol">
+    <div class="imgbox">HANDYMAN / VAN IMAGE</div>
+    <div>
+      <h2>For Service Providers</h2>
+      <p>Independent handymen, small teams, and tradespeople who want less downtime and steadier income.</p>
+      <ul>
+        <li>Long commutes & wasted time between jobs</li>
+        <li>Unpredictable demand</li>
+        <li>Time spent on marketing & chasing leads</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="wrap">
+    <h2>How AnyFix Works</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><strong>Post a request</strong><p class="sub">Describe the job in minutes.</p></div>
+      <div class="step"><div class="num">2</div><strong>Get matched</strong><p class="sub">We pair you with trusted pros.</p></div>
+      <div class="step"><div class="num">3</div><strong>Upfront pricing</strong><p class="sub">No surprises at checkout.</p></div>
+      <div class="step"><div class="num">4</div><strong>Get it done</strong><p class="sub">Same-day or scheduled.</p></div>
+      <div class="step"><div class="num">5</div><strong>Rate & pay</strong><p class="sub">Secure payment + reviews.</p></div>
+    </div>
+  </section>
+
+  <!-- Waitlist / Form -->
+  <section id="waitlist" class="wrap">
+    <h2>Join the Waitlist</h2>
+    <p>Be the first to know when AnyFix launches in Seattle. Sign up for early access and perks.</p>
+    <iframe src="https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/viewform?embedded=true" title="AnyFix Waitlist Form">Loading…</iframe>
+    <p style="margin-top:10px; color:var(--muted); font-size:14px">Don’t have a form yet? Use the template questions we provided earlier. In Google Forms: Send → Embed → copy the <iframe> URL above.</p>
+  </section>
+
+  <!-- Footer / About -->
+  <section class="wrap" id="about">
+    <h2>About AnyFix</h2>
+    <p>AnyFix is redefining handyman services by making every project count — from small, nagging fixes to larger repairs. We bring convenience to property owners and dependable earnings to providers, all in one simple platform.</p>
+  </section>
+
+  <footer>© 2025 AnyFix • Seattle, Washington</footer>
+</body>
+</html>
