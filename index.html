@@ -1,201 +1,1223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnyFix — Every Fix Covered</title>
-  <style>
-    :root{
-      --bg:#ffffff;
-      --card:#f9fafb;
-      --muted:#4b5563;
-      --text:#111827;
-      --accent:#3b82f6;
-      --accent-2:#38bdf8;
-      --maxw:1100px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:var(--bg); color:var(--text)}
-    a{color:inherit;text-decoration:none}
-    /* Header */
-    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px); background:rgba(255,255,255,.9); border-bottom:1px solid rgba(0,0,0,.05)}
-    .nav{max-width:var(--maxw); margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 20px}
-    .brand{display:flex; align-items:center; font-weight:800; font-size:20px}
-    .brand .logo{
-      width:42px;
-      height:42px;
-      border-radius:8px;
-      background:#3b82f6;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-weight:900;
-      font-size:20px;
-      font-family:Arial, sans-serif;
-      margin-right:-12px; /* move nyFix closer */
-      z-index:0;
-    }
-    .brand .text{
-      font-weight:800;
-      color:#111827;
-      font-size:20px;
-      margin-left:0;
-      z-index:1;
-      position:relative;
-    }
-    nav ul{list-style:none; display:flex; gap:18px; margin:0; padding:0}
-    nav a{padding:8px 10px; border-radius:8px; font-weight:600; color:var(--muted)}
-    nav a:hover{background:rgba(59,130,246,.1); color:var(--text)}
-    .cta{background:var(--accent); color:#fff; padding:10px 14px; border-radius:10px; font-weight:800}
-    .cta:hover{filter:brightness(1.05)}
-
-    /* Containers */
-    .wrap{max-width:var(--maxw); margin:0 auto; padding:20px 20px}
-
-    /* Hero */
-    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center; padding-top:42px}
-    .kicker{color:var(--accent-2); font-weight:700; text-transform:uppercase; letter-spacing:.12em; font-size:12px}
-    h1{font-size:44px; line-height:1.05; margin:10px 0 14px}
-    .sub{color:var(--muted); font-size:18px}
-    .hero-actions{margin-top:22px; display:flex; gap:12px; flex-wrap:wrap}
-    .btn{background:#f3f4f6; border:1px solid rgba(0,0,0,.1); padding:12px 16px; border-radius:12px; color:var(--text); font-weight:700}
-    .btn.primary{background:var(--accent); color:#fff; border-color:transparent}
-    .panel{border:1px solid rgba(0,0,0,.1); border-radius:18px; padding:18px; background:#f9fafb}
-    .panel .illus{aspect-ratio:16/10; border-radius:12px; background:url('hero.png') center/cover no-repeat; display:grid; place-items:center; font-weight:800}
-
-    /* Sections */
-    section{scroll-margin-top:84px}
-    h2{font-size:30px; margin:0 0 14px}
-    p{color:var(--muted)}
-
-    .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .card{background:#f9fafb; border:1px solid rgba(0,0,0,.05); border-radius:14px; padding:16px}
-    .card h3{margin:6px 0 8px; font-size:18px}
-    .card .icon{font-size:24px}
-
-    .twocol{display:grid; grid-template-columns:1fr 1fr; gap:24px}
-    .imgbox{background:#f3f4f6; border:1px dashed rgba(0,0,0,.1); border-radius:12px; aspect-ratio:16/11; display:grid; place-items:center; color:#9ca3af; font-weight:700}
-    ul{margin:8px 0 0 18px}
-
-    .steps{display:grid; grid-template-columns:repeat(5,1fr); gap:12px}
-    .step{background:#f9fafb; border:1px solid rgba(0,0,0,.05); border-radius:12px; padding:14px}
-    .step .num{width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:var(--accent); color:#fff; font-weight:900; margin-bottom:8px}
-
-    iframe{width:100%; min-height:520px; border:0; background:#fff; border-radius:12px}
-
-    footer{padding:40px 20px; text-align:center; color:var(--muted)}
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .grid-4{grid-template-columns:1fr 1fr}
-      .steps{grid-template-columns:1fr 1fr}
-      .twocol{grid-template-columns:1fr}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnyFix - Quality Handyman Services in Sammamish, WA | Licensed & Insured</title>
+    <meta name="description" content="Professional handyman services in Sammamish with transparent pricing. From repairs to custom carpentry. Licensed, insured, 15+ years experience. Call for same-day service.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #0f172a;
+            --color-primary-dark: #020617;
+            --color-accent: #3b82f6;
+            --color-accent-light: #60a5fa;
+            --color-neutral-100: #f8fafc;
+            --color-neutral-200: #e2e8f0;
+            --color-neutral-800: #1e293b;
+            --color-neutral-900: #0f172a;
+            --color-white: #ffffff;
+            --color-blue-50: #eff6ff;
+            --color-blue-100: #dbeafe;
+            
+            --font-display: 'Fraunces', serif;
+            --font-body: 'Public Sans', sans-serif;
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+            
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--color-neutral-800);
+            line-height: 1.7;
+            background: var(--color-white);
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+        
+        .logo span {
+            color: var(--color-accent);
+        }
+        
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .phone-link:hover {
+            color: var(--color-accent);
+        }
+        
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--color-accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            padding: var(--spacing-xl) 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            line-height: 1.1;
+            color: var(--color-primary-dark);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+        
+        .hero-content h1 .highlight {
+            color: var(--color-accent);
+            display: block;
+        }
+        
+        .hero-content p {
+            font-size: 1.25rem;
+            color: var(--color-neutral-800);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            font-size: 0.95rem;
+        }
+        
+        .badge svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-accent);
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            padding: 1rem 2rem;
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-primary:hover {
+            background: var(--color-accent-light);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(59, 130, 246, 0.4);
+        }
+        
+        .cta-secondary {
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-secondary:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: var(--spacing-xl) 2rem;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--color-neutral-800);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            background: var(--color-neutral-100);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pricing-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-neutral-200);
+        }
+        
+        .price-item:last-child {
+            border-bottom: none;
+        }
+        
+        .price-label {
+            font-weight: 500;
+            color: var(--color-neutral-800);
+        }
+        
+        .price-value {
+            font-weight: 700;
+            color: var(--color-accent);
+            font-size: 1.1rem;
+        }
+        
+        .common-jobs {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .job-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            background: var(--color-neutral-100);
+            border-radius: var(--radius-sm);
+        }
+        
+        .pricing-note {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #eff6ff;
+            border-left: 4px solid var(--color-accent);
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            color: var(--color-neutral-800);
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-accent);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .service-card li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--color-neutral-800);
+        }
+        
+        .service-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+        
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .step h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .step p {
+            color: var(--color-neutral-800);
+            font-size: 0.95rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: var(--color-neutral-200);
+            border-radius: var(--radius-lg);
+            object-fit: cover;
+        }
+        
+        .about-text h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .highlight-item {
+            text-align: center;
+        }
+        
+        .highlight-value {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Form */
+        .contact-section {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .contact-method svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--color-accent);
+        }
+        
+        .contact-method a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .contact-method a:hover {
+            color: var(--color-accent);
+        }
+        
+        .service-area {
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .service-area h4 {
+            font-family: var(--font-display);
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .service-area p {
+            color: var(--color-neutral-800);
+            line-height: 1.6;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--color-neutral-800);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid var(--color-neutral-200);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .form-submit:hover {
+            background: var(--color-accent-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-brand h3 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        .footer-links h4 {
+            font-family: var(--font-display);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-grid,
+            .contact-grid,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-contact {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+            }
+            
+            .cta-primary,
+            .cta-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header / Nav -->
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="logo">A</div>
-        <div class="text">nyFix</div>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#why">Why AnyFix</a></li>
-          <li><a href="#owners">Property Owners</a></li>
-          <li><a href="#providers">Service Providers</a></li>
-          <li><a href="#how">How It Works</a></li>
-          <li><a href="#waitlist" class="cta">Join the Waitlist</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo">Any<span>Fix</span></a>
+            <div class="header-contact">
+                <a href="tel:+14252712315" class="phone-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/>
+                        <path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"/>
+                    </svg>
+                    (425) 271-2315
+                </a>
+                <a href="#contact" class="cta-button">Get a Quote</a>
+            </div>
+        </div>
+    </header>
 
-  <!-- Hero -->
-  <main id="home" class="wrap hero">
-    <div>
-      <div class="kicker">Every Fix Covered</div>
-      <h1>Book trusted handymen no matter the size of the project.</h1>
-      <p class="sub">From quick fixes to larger repairs, AnyFix makes it effortless to get reliable help — at transparent prices.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#waitlist">Join the Waitlist</a>
-        <a class="btn" href="#how">See how it works</a>
-      </div>
-      <p style="margin-top:14px; font-size:13px; color:var(--muted)">Launching first in Seattle. Seeking early users on both sides of the marketplace.</p>
-    </div>
-    <div class="panel">
-      <div class="illus"></div>
-    </div>
-  </main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>
+                    Quality Home Repairs &
+                    <span class="highlight">Improvements</span>
+                </h1>
+                <p>Professional handyman services in Sammamish with transparent pricing, reliable service, and quality craftsmanship you can trust.</p>
+                
+                <div class="trust-badges">
+                    <div class="badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3zm6 9.09c0 4-2.55 7.7-6 8.83-3.45-1.13-6-4.82-6-8.83V6.31l6-2.12 6 2.12v4.78z"/>
+                        </svg>
+                        Licensed & Insured
+                    </div>
+                    <div class="badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        15+ Years Experience
+                    </div>
+                    <div class="badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        Sammamish Local
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <a href="#contact" class="cta-primary">Get Free Quote</a>
+                    <a href="tel:+14252712315" class="cta-secondary">Call Now</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <!-- Replace with your actual image -->
+                <img src="hero.png" alt="Professional handyman providing quality home repair services">
+            </div>
+        </div>
+    </section>
 
-  <!-- Why AnyFix -->
-  <section id="why" class="wrap">
-    <h2>Why AnyFix?</h2>
-    <p>We make small jobs worth doing and big jobs easy to schedule.</p>
-    <div class="grid-4">
-      <div class="card"><div class="icon">⚡</div><h3>Convenience</h3><p>Book in minutes. Same-day or scheduled.</p></div>
-      <div class="card"><div class="icon">💲</div><h3>Transparency</h3><p>Upfront pricing. No surprises.</p></div>
-      <div class="card"><div class="icon">🛡️</div><h3>Reliability</h3><p>Vetted, rated providers with guarantees.</p></div>
-      <div class="card"><div class="icon">🧰</div><h3>Coverage</h3><p>From bulb replacements to bigger repairs.</p></div>
-    </div>
-  </section>
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Transparent Pricing</h2>
+                <p>Clear, fair pricing with no hidden fees. Know what you'll pay before work begins.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Standard Rates</h3>
+                    <div class="pricing-details">
+                        <div class="price-item">
+                            <span class="price-label">Hourly Rate</span>
+                            <span class="price-value">$75/hour</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Minimum Service Call</span>
+                            <span class="price-value">$150 (2 hours)</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Materials Markup</span>
+                            <span class="price-value">Cost + 20%</span>
+                        </div>
+                        <div class="price-item">
+                            <span class="price-label">Travel (within 10 mi)</span>
+                            <span class="price-value">Included</span>
+                        </div>
+                    </div>
+                    <div class="pricing-note">
+                        <strong>What's Included:</strong> Labor, basic materials, travel within 10 miles of Sammamish, complete cleanup. Receipts provided for all materials.
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Common Job Estimates</h3>
+                    <div class="common-jobs">
+                        <div class="job-item">
+                            <span>TV Mounting (basic)</span>
+                            <span class="price-value">$150-200</span>
+                        </div>
+                        <div class="job-item">
+                            <span>Furniture Assembly (per item)</span>
+                            <span class="price-value">$75-150</span>
+                        </div>
+                        <div class="job-item">
+                            <span>Install Shelving (per shelf)</span>
+                            <span class="price-value">$100-175</span>
+                        </div>
+                        <div class="job-item">
+                            <span>Drywall Repair (small)</span>
+                            <span class="price-value">$150-250</span>
+                        </div>
+                        <div class="job-item">
+                            <span>Fence Repair (per section)</span>
+                            <span class="price-value">$200-350</span>
+                        </div>
+                        <div class="job-item">
+                            <span>Door Installation</span>
+                            <span class="price-value">$250-450</span>
+                        </div>
+                    </div>
+                    <div class="pricing-note">
+                        <strong>No Surprise Charges:</strong> Estimates provided after reviewing photos/details. If actual work differs from estimate, we'll discuss options before proceeding.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Property Owners -->
-  <section id="owners" class="wrap twocol">
-    <div>
-      <h2>For Property Owners</h2>
-      <p>Homeowners, renters, and small businesses who need dependable help — even for small tasks.</p>
-      <ul>
-        <li>Hard to find providers who accept small jobs</li>
-        <li>Unclear or inconsistent pricing</li>
-        <li>Missed appointments & poor communication</li>
-      </ul>
-    </div>
-    <div class="imgbox"><img src="property-owner.png" alt="Service provider illustration" style="width:100%; border-radius:12px;"/></div>
-  </section>
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Services We Offer</h2>
+                <p>From quick fixes to custom builds, we handle it all with quality craftsmanship.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M13 3v18h8V3h-8zM3 13h8v8H3v-8zM3 3h8v8H3V3z"/>
+                        </svg>
+                    </div>
+                    <h3>Carpentry & Woodwork</h3>
+                    <ul>
+                        <li>Custom shelving and built-ins</li>
+                        <li>Trim and molding installation</li>
+                        <li>Deck and fence repairs</li>
+                        <li>Furniture assembly</li>
+                        <li>Minor framing work</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+                        </svg>
+                    </div>
+                    <h3>Home Repairs</h3>
+                    <ul>
+                        <li>Drywall repair and patching</li>
+                        <li>Door and window adjustments</li>
+                        <li>Minor plumbing fixes</li>
+                        <li>Light fixture installation</li>
+                        <li>Cabinet hardware installation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                        </svg>
+                    </div>
+                    <h3>Home Organization</h3>
+                    <ul>
+                        <li>Garage organization systems</li>
+                        <li>Closet organization</li>
+                        <li>Mudroom upgrades</li>
+                        <li>Wall-mounted storage</li>
+                        <li>Custom organization solutions</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21 3H3c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.11-.9-2-2-2zm0 14H3V5h18v12z"/>
+                        </svg>
+                    </div>
+                    <h3>TV & Tech Installation</h3>
+                    <ul>
+                        <li>TV mounting</li>
+                        <li>Cable management</li>
+                        <li>Smart home device setup</li>
+                        <li>Soundbar installation</li>
+                        <li>Network equipment mounting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Service Providers -->
-  <section id="providers" class="wrap twocol">
-    <div class="imgbox"><img src="service-provider.png" alt="Service provider illustration" style="width:100%; border-radius:12px;"/></div>
-    <div>
-      <h2>For Service Providers</h2>
-      <p>Independent handymen and small teams who want less downtime and steadier income.</p>
-      <ul>
-        <li>Long commutes & wasted time between jobs</li>
-        <li>Unpredictable demand</li>
-        <li>Time spent on marketing & chasing leads</li>
-      </ul>
-    </div>
-  </section>
+    <!-- How It Works -->
+    <section class="section" style="background: var(--color-neutral-100);">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Simple, straightforward process from quote to completion.</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Request Quote</h3>
+                    <p>Send photos and description. Get estimate within 24 hours.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Schedule Service</h3>
+                    <p>Choose a convenient time. Confirmation sent with arrival window.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Quality Work</h3>
+                    <p>Professional service completed to your satisfaction.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Easy Payment</h3>
+                    <p>Venmo, Zelle, check, or cash. Payment due upon completion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- How It Works -->
-  <section id="how" class="wrap">
-    <h2>How AnyFix Works</h2>
-    <div class="steps">
-      <div class="step"><div class="num">1</div><strong>Post a request</strong><p class="sub">Describe the job in minutes.</p></div>
-      <div class="step"><div class="num">2</div><strong>Get matched</strong><p class="sub">We pair you with trusted pros.</p></div>
-      <div class="step"><div class="num">3</div><strong>Upfront pricing</strong><p class="sub">No surprises at checkout.</p></div>
-      <div class="step"><div class="num">4</div><strong>Get it done</strong><p class="sub">Same-day or scheduled.</p></div>
-      <div class="step"><div class="num">5</div><strong>Rate & pay</strong><p class="sub">Secure payment + reviews.</p></div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="section-container">
+            <div class="about-content">
+                <img src="service-provider.png" alt="AnyFix handyman providing professional home services" class="about-image">
+                <div class="about-text">
+                    <h2>Hi, I'm Alejandro</h2>
+                    <p>After 15 years leading product teams at Amazon and other companies, I discovered my passion for hands-on work. I've built custom woodwork for my own home—a foyer fixture, mudroom renovation, and multi-function workbench—and realized I could help neighbors with their projects too.</p>
+                    
+                    <p>I bring the same attention to detail and process thinking from my corporate career to every handyman job. That means clear communication, accurate estimates, and quality results you can trust.</p>
+                    
+                    <p>As a Sammamish resident and homeowner, I understand the frustration of unclear quotes, no-shows, and surprise charges. That's why I built AnyFix differently: transparent pricing, reliable scheduling, and honest work.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-value">15+</span>
+                            <span class="highlight-label">Years PM Experience</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-value">100%</span>
+                            <span class="highlight-label">Satisfaction Guaranteed</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-value">Local</span>
+                            <span class="highlight-label">Sammamish Resident</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Waitlist / Form -->
-  <section id="waitlist" class="wrap">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehu287tbatw1y9DuMuoboWxg0StGFPW1u-W9CzWh5MA77EpA/viewform?embedded=true" title="AnyFix Waitlist Form">Loading…</iframe>
-    <p style="margin-top:10px; color:var(--muted); font-size:14px">Don’t have a form yet? Use the template questions we provided earlier. In Google Forms: Send → Embed → copy the <iframe> URL above.</p>
-  </section>
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Get Your Free Quote</h2>
+                <p>Ready to get started? Contact us today for a free, no-obligation estimate.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"/>
+                                <path d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a1 1 0 0 0-.086-1.391l-4.064-3.696z"/>
+                            </svg>
+                            <div>
+                                <div>Call or Text</div>
+                                <a href="tel:+14252712315">(425) 271-2315</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <div>
+                                <div>Email</div>
+                                <a href="/cdn-cgi/l/email-protection#aecfccc1dccac1c0eec9c3cfc7c280cdc1c3"><span class="__cf_email__" data-cfemail="48292a273a2c2726082f25292124662b2725">[email&#160;protected]</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-area">
+                        <h4>Service Area</h4>
+                        <p><strong>Primary:</strong> Sammamish, WA</p>
+                        <p><strong>Also serving:</strong> Issaquah, Redmond, Bellevue, Kirkland, and surrounding areas within 15 miles</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--color-neutral-800);">Outside this area? Contact me—I may still be able to help for larger projects.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Type of Service *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="carpentry">Carpentry & Woodwork</option>
+                                <option value="repairs">Home Repairs</option>
+                                <option value="organization">Home Organization</option>
+                                <option value="tech">TV & Tech Installation</option>
+                                <option value="assembly">Furniture Assembly</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Project Description *</label>
+                            <textarea id="description" name="description" placeholder="Please describe what you need done..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="timeline">Preferred Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="asap">ASAP</option>
+                                <option value="week">This Week</option>
+                                <option value="month">This Month</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Request Free Quote</button>
+                        <p style="margin-top: 1rem; text-align: center; color: var(--color-neutral-800); font-size: 0.9rem;">
+                            Response within 24 hours
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer / About -->
-  <section class="wrap" id="about">
-    <h2>About AnyFix</h2>
-    <p>AnyFix is redefining handyman services by making every project count — from small, nagging fixes to larger repairs. We bring convenience to property owners and dependable earnings to providers, all in one simple platform.</p>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>AnyFix</h3>
+                <p>Professional handyman services in Sammamish with transparent pricing, reliable service, and quality craftsmanship.</p>
+                <p style="margin-top: 1rem;">Licensed & Insured</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+14252712315">(425) 271-2315</a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#8cedeee3fee8e3e2ccebe1ede5e0a2efe3e1"><span class="__cf_email__" data-cfemail="e081828f92848f8ea0878d81898cce838f8d">[email&#160;protected]</span></a></li>
+                    <li>Sammamish, WA</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 AnyFix. All rights reserved. | Sammamish, Washington</p>
+        </div>
+    </footer>
 
-  <footer>© 2025 AnyFix • Seattle, Washington</footer>
-</body>
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elemen
