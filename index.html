@@ -1514,6 +1514,7 @@
 
         // ⚠️ REPLACE THIS WITH YOUR ACTUAL SUPABASE FUNCTION URL
         const SUPABASE_FUNCTION_URL = 'https://jpbfbtrkifkkepshgtvl.supabase.co/functions/v1/submit-quote';
+		const SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpwYmZidHJraWZra2Vwc2hndHZsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAzMTM4MDksImV4cCI6MjA4NTg4OTgwOX0.yIZlC0y9OEbhXCwQF6ZUbmdJJQhgRTlD4geOsCiPxhU
 
         quoteForm.addEventListener('submit', async (e) => {
             e.preventDefault();
@@ -1537,14 +1538,15 @@
             
             try {
                 // Submit to Supabase Edge Function
-                const response = await fetch(SUPABASE_FUNCTION_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
+				const response = await fetch(SUPABASE_FUNCTION_URL, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+						'apikey': SUPABASE_ANON_KEY,
+						'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
+					},
+					body: JSON.stringify(formData)
+				});                
                 const result = await response.json();
                 
                 if (response.ok && result.success) {
