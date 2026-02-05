@@ -794,6 +794,115 @@
                 text-align: center;
             }
         }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: var(--color-white);
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border: 2px solid var(--color-neutral-200);
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--color-accent);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-neutral-800);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--color-accent);
+        }
+        
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .faq-answer p {
+            color: var(--color-neutral-800);
+            line-height: 1.7;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--color-accent-light);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        .back-to-top svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
     </style>
 </head>
 <body>
@@ -1063,8 +1172,8 @@
             <div class="about-content">
                 <img src="Headshot_avatar_green.png" alt="AnyFix handyman providing professional home services" class="about-image">
                 <div class="about-text">
-                    <h2>Hi, I'm Alejandro</h2>
-                    <p>After many years leading product teams, I discovered my passion for hands-on work. I've built custom woodwork for my own home—a foyer fixture, mudroom renovation, and multi-function workbench—and realized I could help neighbors with their projects too.</p>
+                    <h2>Hi, I'm Alex</h2>
+                    <p>After many years leading product teams in big tech, I discovered my passion for hands-on work. I've built custom woodwork for my own home—a foyer fixture, mudroom renovation, and multi-function workbench—and realized I could help neighbors with their projects too.</p>
                     
                     <p>I bring the same attention to detail and process thinking from my corporate career to every handyman job. That means clear communication, accurate estimates, and quality results you can trust.</p>
                     
@@ -1119,7 +1228,7 @@
                             </svg>
                             <div>
                                 <div>Email</div>
-                                <a href="/cdn-cgi/l/email-protection#6b02050d042b0a05120d0213180e191d02080e1845080406"><span class="__cf_email__" data-cfemail="721b1c141d32131c0b141b0a011700041b1117015c111d1f">[email&#160;protected]</span></a>
+                                <a href="mailto:info@anyfixservices.com">info@anyfixservices.com</a>
                             </div>
                         </div>
                     </div>
@@ -1133,7 +1242,7 @@
                 </div>
                 
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <form id="quoteForm">
                         <div class="form-group">
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="name" required>
@@ -1153,12 +1262,12 @@
                             <label for="service">Type of Service *</label>
                             <select id="service" name="service" required>
                                 <option value="">Select a service...</option>
-                                <option value="carpentry">Mounting & Installation</option>
-                                <option value="repairs">Repairs & Maintenance</option>
-                                <option value="organization">Kitchen & Bathroom</option>
-                                <option value="tech">Electrical (Simple)</option>
-                                <option value="assembly">Custom Project</option>
-                                <option value="other">Other / Not Sure</option>
+                                <option value="Mounting & Installation">Mounting & Installation</option>
+                                <option value="Repairs & Maintenance">Repairs & Maintenance</option>
+                                <option value="Kitchen & Bathroom">Kitchen & Bathroom</option>
+                                <option value="Electrical (Simple)">Electrical (Simple)</option>
+                                <option value="Custom Projects">Custom Projects</option>
+                                <option value="Other / Not Sure">Other / Not Sure</option>
                             </select>
                         </div>
                         
@@ -1170,18 +1279,122 @@
                         <div class="form-group">
                             <label for="timeline">Preferred Timeline</label>
                             <select id="timeline" name="timeline">
-                                <option value="asap">ASAP</option>
-                                <option value="week">This Week</option>
-                                <option value="month">This Month</option>
-                                <option value="flexible">Flexible</option>
+                                <option value="ASAP">ASAP</option>
+                                <option value="This Week">This Week</option>
+                                <option value="This Month">This Month</option>
+                                <option value="Flexible">Flexible</option>
                             </select>
                         </div>
                         
-                        <button type="submit" class="form-submit">Request Free Quote</button>
-                        <p style="margin-top: 1rem; text-align: center; color: var(--color-neutral-800); font-size: 0.9rem;">
+                        <div class="form-group">
+                            <label for="source">How did you hear about us?</label>
+                            <select id="source" name="source">
+                                <option value="Google">Google Search</option>
+                                <option value="Nextdoor">Nextdoor</option>
+                                <option value="Friend/Referral">Friend/Referral</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="form-submit" id="submitBtn">Request Free Quote</button>
+                        <p id="formMessage" style="margin-top: 1rem; text-align: center; font-size: 0.9rem;"></p>
+                        <p style="margin-top: 0.5rem; text-align: center; color: var(--color-neutral-800); font-size: 0.9rem;">
                             Response within 24 hours
                         </p>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our services, pricing, and policies.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide free estimates?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! Send me photos and a description of your project, and I'll provide an estimate within 24 hours. For larger or complex projects, I may need to visit in person (free within 10 miles of Sammamish).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if the job takes longer than estimated?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If I've underestimated, I'll honor the original quote for jobs under $500. For larger jobs, we'll discuss before proceeding if scope changes. My goal is transparent pricing with no surprise charges.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Are you licensed and insured?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, I am fully licensed and carry general liability insurance for your protection and peace of mind.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What's your cancellation policy?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can cancel or reschedule up to 24 hours before your appointment without penalty. Cancellations within 24 hours have a $75 cancellation fee.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you work weekends?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! I offer flexible scheduling including evenings and weekends to accommodate your busy schedule.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I accept Venmo, Zelle, check, or cash. Payment is due upon completion and your approval of the work.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What if I'm not satisfied with the work?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your satisfaction is guaranteed. If you're not happy with the work, I'll make it right or refund your money. Quality and customer satisfaction are my top priorities.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How far outside Sammamish do you travel?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I primarily serve Sammamish and surrounding areas within 15 miles (Issaquah, Redmond, Bellevue, Kirkland). For larger projects, I may be able to travel further. Contact me to discuss your location.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1211,7 +1424,7 @@
                 <h4>Contact</h4>
                 <ul>
                     <li><a href="tel:+14252702283">(425) 270-2283</a></li>
-                    <li><a href="/cdn-cgi/l/email-protection#3950575f56795857405f50414a5c4b4f505a5c4a175a5654"><span class="__cf_email__" data-cfemail="90f9fef6ffd0f1fee9f6f9e8e3f5e2e6f9f3f5e3bef3fffd">[email&#160;protected]</span></a></li>
+                    <li><a href="/cdn-cgi/l/email-protection#066f6860694667687f606f7e756374706f6563752865696b"><span class="__cf_email__" data-cfemail="c2abaca4ad82a3acbba4abbab1a7b0b4aba1a7b1eca1adaf">[email&#160;protected]</span></a></li>
                     <li>Sammamish, WA</li>
                 </ul>
             </div>
@@ -1222,6 +1435,14 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Header scroll effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
@@ -1234,3 +1455,130 @@
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission handler
+        const quoteForm = document.getElementById('quoteForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessage = document.getElementById('formMessage');
+
+        // ⚠️ REPLACE THIS WITH YOUR ACTUAL SUPABASE FUNCTION URL
+        const SUPABASE_FUNCTION_URL = 'https://jpbfbtrkifkkepshgtvl.supabase.co/functions/v1/submit-quote';
+
+        quoteForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            formMessage.textContent = '';
+            formMessage.style.color = '';
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                description: document.getElementById('description').value,
+                timeline: document.getElementById('timeline').value,
+                source: document.getElementById('source').value
+            };
+            
+            try {
+                // Submit to Supabase Edge Function
+                const response = await fetch(SUPABASE_FUNCTION_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    // Success!
+                    formMessage.textContent = '✓ Quote request submitted successfully! We\'ll respond within 24 hours.';
+                    formMessage.style.color = 'var(--color-accent)';
+                    formMessage.style.fontWeight = '600';
+                    
+                    // Reset form
+                    quoteForm.reset();
+                    
+                    // Optional: Track conversion with analytics
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion', {
+                            'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+                            'value': 1.0,
+                            'currency': 'USD'
+                        });
+                    }
+                    
+                } else {
+                    throw new Error(result.error || 'Submission failed');
+                }
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                formMessage.textContent = '⚠ There was an error submitting your request. Please call us at (425) 270-2283.';
+                formMessage.style.color = '#dc2626';
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Request Free Quote';
+            }
+        });
+    </script>
+</body>
+</html>
